@@ -181,3 +181,12 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch; }
+  
+  #joystick td{
+      padding: 2px;
+      margin:20px;
+  }
+
+  .logo{
+      height:100% ;
+  }

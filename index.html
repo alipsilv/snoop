@@ -1,42 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-
     <meta charset="utf-8">
   	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   	<title>Snoop</title>
 
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     <link href="styles/app.css" rel="stylesheet">
-
-    <!-- Add to home screen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Snoop">
-    <link rel="apple-touch-icon" href="images/snoop_50.png">
-
-    <meta name="msapplication-TileImage" content="images/snoopy_pilot.svg">
-    <meta name="msapplication-TileColor" content="#2F3BA2">
-
-    <link href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="styles/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style media="screen">
-        #joystick td{
-            padding: 2px;
-            margin:20px;
-        }
-
-        .logo{
-            height:100% ;
-        }
-    </style>
-
+    <link href="fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
   </head>
 
   <body>
-
       <header class="header">
           <img class="logo" src="images/snoopy_pilot.svg"></i>
           <h1 class="header_title">Snoop</h1>
@@ -96,51 +73,6 @@
 
     <script src="scripts/jquery-2.1.4.js"></script>
     <script src="styles/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            console.log("Document ready");
-            $("body").keypress(function(e){
-              switch(e.which) {
-                case 119:
-                    action('up');
-                    break;
-                case 115:
-                    action('down');
-                    break;
-                case 97:
-                    action('left');
-                    break;
-                case 100:
-                    action('right');
-                    break;
-              }
-            });
-            $('button').on('click', function(){
-                $btn = $(this);
-                action($btn.data('act'));
-            });
-            function action(action){
-                $("button.joystick").removeClass("btn-danger");
-                $("button.joystick." + action).addClass("btn-danger");
-                switch(action) {
-                    case 'up':
-                        console.log('up');
-                        break;
-                    case 'down':
-                        console.log('down');
-                        break;
-                    case 'left':
-                        console.log('left');
-                        break;
-                    case 'right':
-                        console.log('right');
-                        break;
-                    default:
-                        console.log('action');
-                }
-
-            }
-        });
-    </script>
+    <script src="scripts/app.js"></script>
   </body>
 </html>
